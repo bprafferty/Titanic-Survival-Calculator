@@ -12,7 +12,7 @@ This app predicts the **likelihood** that you would have survived the infamous d
 Data obtained from Kaggle: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
 
 I developed the model used in this app for the Titanic Kaggle Competition listed above, placing in the top 5% of all submissions. 
-For an in depth look at my Kaggle notebook: [Titanic Classification with SVM](https://www.kaggle.com/brianrafferty/titanic-classification-with-svm)
+For an in-depth look at my Kaggle notebook: [Titanic Classification with SVM](https://www.kaggle.com/brianrafferty/titanic-classification-with-svm)
 """)
 
 st.sidebar.header('User Input Features')
