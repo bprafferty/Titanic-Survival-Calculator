@@ -7,8 +7,12 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.write("""
 # Titanic Prediction App
+## Created by Brian Rafferty
 This app predicts the **likelihood** that you would have survived the infamous disaster!
-Data obtained from Kaggle: [Titanic: Machine Learning from Disaster](https://github.com/allisonhorst/palmerpenguins)
+Data obtained from Kaggle: [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)
+
+I developed the model used in this app for the Titanic Kaggle Competition listed above, placing in the top 5% of all submissions. 
+For an in depth look at my Kaggle notebook: [Titanic Classification with SVM](https://www.kaggle.com/brianrafferty/titanic-classification-with-svm)
 """)
 
 st.sidebar.header('User Input Features')
@@ -109,8 +113,8 @@ prediction_probability = load_svm.predict_proba(input_df)
 
 
 st.subheader('Prediction')
-result = np.array(['You did not survive.','You Survived!'])
+result = np.array(['You likely did not survive.','You likely survived!'])
 st.write(result[prediction][0])
 
 st.subheader('Prediction Probability')
-st.write('Survival Likelihood: {0:.2f}%'.format(prediction_probability[0][1] * 100))
+st.write('Based upon the traits you entered,\nyou had a {0:.2f}% chance to survive.'.format(prediction_probability[0][1] * 100))
